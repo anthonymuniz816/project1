@@ -1,8 +1,8 @@
 Anthony Muniz
 
-Comp Sci 303
-
 09/20
+
+Comp Sci 303
 
 Program Instructions:
 
