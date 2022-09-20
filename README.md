@@ -30,3 +30,10 @@ Program Instructions:
 
 12. If the user inputs “e”, the program will end.
 
+SCREENSHOTS:
+
+![image](https://user-images.githubusercontent.com/90846030/191359027-ef27ef2d-fece-4dbc-85dd-1a370b34e56f.png)
+
+![image](https://user-images.githubusercontent.com/90846030/191359109-91a87742-675e-4e4c-85be-784898720026.png)
+
+
