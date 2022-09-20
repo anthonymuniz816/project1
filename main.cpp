@@ -1,3 +1,7 @@
+//Anthony Muniz
+//09/20
+//CS 303
+
 #include <iostream>
 #include<fstream>
 #include<sstream>
@@ -12,16 +16,16 @@ int main(){
  ifstream fin("data.txt"); //Opens the file
   char choice;
   int size, index, datanum, num;
-  int* L;
+  int* arr;
   
 cout << "How many numbers are in file? "; 
 cin >> size;
-L = new (nothrow) int[size]; //Array is made based on size of the users input
+arr = new (nothrow) int[size]; //Array is made based on size of the users input
   
 while(fin.good()){            //Reads file and adds each integer until it reaches 
     for(int i=0;i<size;i++){  //end of file
       fin >> datanum;
-      L[i]=datanum;
+      arr[i]=datanum;
     }
       }
 
@@ -36,15 +40,15 @@ cout << endl;
     case 'a': case 'A':
       cout << "What number would you like to check for? ";
       cin >> num;
-      if(check_num(L, num, size)== 0){
+      if(check_num(arr, num, size)== 0){
         cout << "The number was not found!"<< endl;
       }
       else{
-        cout << "The number was found at index "<<check_num(L,num,size)<< "."<< endl;
+        cout << "The number was found at index "<<check_num(arr,num,size)<< "."<< endl;
       }  //looks for number user is looking for
       cout << "The array looks as follows: "<< endl;
       for(int index=0;index<size;index++){  //prints array
-      cout << L[index] << " ";
+      cout << arr[index] << " ";
     }
   
     break;
@@ -54,10 +58,10 @@ cout << endl;
       cin >>index;
       cout << "What would you like the new number to be? ";
       cin >> num;
-      cout<< "The number you modified was " << L[index]<< ", it is now "<< modify_num(L,num,index)<<"."<< endl;  //modifies number in array
+      cout<< "The number you modified was " << arr[index]<< ", it is now "<< modify_num(arr,num,index)<<"."<< endl;  //modifies number in array
       cout << "The array looks as follows: "<< endl;
       for(int index=0;index<size;index++){ //prints array
-      cout << L[index] << " ";
+      cout << arr[index] << " ";
     }
   
     break;
@@ -66,11 +70,11 @@ cout << endl;
       cout << "What number would you like to add? ";
       cin >> num;
       cout << "The array now has " << num<< " added to it!"<< endl;
-      add_num(L, size, num);//adds space at end of array
-      modify(L,num,size-1); //modifies that space into the number the user wants
+      add_num(arr, size, num);//adds space at end of array
+      modify(arr,num,size-1); //modifies that space into the number the user wants
       cout << "The array looks as follows: "<< endl;
       for(int index=0;index<size;index++){
-      cout << L[index] << " ";
+      cout << arr[index] << " ";
         }
       
     break;
@@ -78,11 +82,11 @@ cout << endl;
     case 'd': case 'D':
       cout << "What index is the number would you liked to delete? ";
       cin >> index;
-      cout << "The array is now missing " << L[index]<< "!"<< endl;
-      delete_num(L,size, index);  //deletes number in array
+      cout << "The array is now missing " << arr[index]<< "!"<< endl;
+      delete_num(arr,size, index);  //deletes number in array
       cout << "The array looks as follows: "<< endl;
       for(int index=0;index<size;index++){
-      cout << L[index] << " ";
+      cout << arr[index] << " ";
     }
 
     break;
@@ -97,7 +101,7 @@ cout << endl;
   }
 
      
-  delete[] L;
+  delete[] arr;
 
 return 0;
 }
