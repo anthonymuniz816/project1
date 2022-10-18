@@ -1,39 +1,18 @@
 Anthony Muniz
 
-09/20
+10/18
 
 Comp Sci 303
 
 Program Instructions:
 
-1. Ask user for the quantity of numbers in the file, user must input the total amount and must input a number.
+1. Program runs and asks the user if they are a Professional or Non-Professional Employee. 
 
-2. Once that is done, the program will read through the file and add every number into one big array.
+2. User then inputs 1 or 0 depending on what they are.
 
-3. Program then displays the options the user can do with the program and asks the user for input, user must input one of the selected characters in the option menu.
+3. If user is a Pro, program will ask for name and how many years they have worked for the company. Program will then output their monthly salary, the amount of money that went towards their health contributions and the amount of weeks they have for vacation this year.
 
-4. If the user inputs “a”, the program will then ask the user to input the number they are looking for. If the number is in the array it will output the index of the number the user was looking for but if it is not in the array it will output that the number is not in the array.
+4. If user is a Non-Pro, program will ask for name and how many hours  they have worked for this week. Program will then output their weekly salary, the amount of money that went towards their health contributions and the amount of hours they have earned for vacation this year during that week.
 
-5. The program will then output the array to show the user how it looks and will ask for another option.
-
-6. If the user inputs “b”, the program will then ask for the index of the number the user wants to modify and its replacement. 
-
-7. The program will then output the array to show the user how it looks and will ask for another option.
-
-8. If the user inputs “c”, the program will then ask the user for the number they want to add to the array.
-
-9. The program will then output the array to show the user how it looks and will ask for another option.
-
-10. If the user inputs “d”, the program will then ask the user for the index of the number they want to delete from the array.
-
-11. The program will then output the array to show the user how it looks and will ask for another option.
-
-12. If the user inputs “e”, the program will end.
-
-SCREENSHOTS:
-
-![image](https://user-images.githubusercontent.com/90846030/191359027-ef27ef2d-fece-4dbc-85dd-1a370b34e56f.png)
-
-![image](https://user-images.githubusercontent.com/90846030/191359109-91a87742-675e-4e4c-85be-784898720026.png)
-
+5. Both Pro and Non Pro are derived from the Class Employee and the data members are Protected so they can be accessed within both child classes.
 
