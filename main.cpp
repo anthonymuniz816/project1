@@ -1,11 +1,13 @@
-//Anthony Muniz
-//09/20
-//CS 303
-
-#include <iostream>
+#include<iostream>
 #include<fstream>
 #include<sstream>
-#include <string>
+#include<string>
+#include<exception>
+#include<cmath>
+#include<cstdlib>
+#include<cctype>
+#include<typeinfo>
+#include<limits>
 #include "header.h"
 using namespace std;
 
@@ -54,21 +56,64 @@ cout << endl;
     break;
     
     case 'b': case 'B':
-      cout << "What is the index of the number you would like to modify? ";
-      cin >>index;
+    
+      try{
+        cout << "What is the index of the number you would like to modify? ";
+        cin >>index;
+        if(index>size || index<0){
+          throw 1;
+        }
+        if(std::cin.fail()){
+          cin.clear();
+          cin.ignore(numeric_limits<streamsize>::max(),'\n');
+          throw 2;
+        }
+        }
+        catch(int err){
+          cout<< "Please enter a valid index number." << endl;
+          cin >> index;
+        }
+
+    try{
       cout << "What would you like the new number to be? ";
       cin >> num;
+      
+        if(std::cin.fail()){
+          cin.clear();
+          cin.ignore(numeric_limits<streamsize>::max(),'\n');
+          throw 1;
+        }
+        }
+        catch(int err){
+          cout<< "Please enter a number." << endl;
+          cin >> num;
+        }
+    
       cout<< "The number you modified was " << arr[index]<< ", it is now "<< modify_num(arr,num,index)<<"."<< endl;  //modifies number in array
       cout << "The array looks as follows: "<< endl;
       for(int index=0;index<size;index++){ //prints array
       cout << arr[index] << " ";
-    }
-  
+        }
+        
+
     break;
     
     case 'c': case 'C':  
+      try{
       cout << "What number would you like to add? ";
       cin >> num;
+        
+        if(std::cin.fail()){
+          cin.clear();
+          cin.ignore(numeric_limits<streamsize>::max(),'\n');
+          throw 1;
+        }
+        }
+        catch(int err){
+          cout<< "Please enter a number." << endl;
+          cin >> num;
+        }
+    
       cout << "The array now has " << num<< " added to it!"<< endl;
       add_num(arr, size, num);//adds space at end of array
       modify(arr,num,size-1); //modifies that space into the number the user wants
@@ -105,3 +150,4 @@ cout << endl;
 
 return 0;
 }
+
