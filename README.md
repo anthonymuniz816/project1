@@ -4,6 +4,8 @@ Anthony Muniz
 
 Comp Sci 303
 
+NEW UPDATED PROGRAM WITH EXCEPTION HANDLING ON BOTH FUNCTIONS.
+
 Program Instructions:
 
 1. Program runs and asks the user if they are a Professional or Non-Professional Employee. 
@@ -16,3 +18,7 @@ Program Instructions:
 
 5. Both Pro and Non Pro are derived from the Class Employee and the data members are Protected so they can be accessed within both child classes.
 
+SCREENSHOTS:
+<img width="1456" alt="Screen Shot 2022-10-18 at 3 29 50 PM" src="https://user-images.githubusercontent.com/90846030/196537900-84697960-e87b-4516-a6fd-61ebe22ed4c8.png">
+
+<img width="1456" alt="Screen Shot 2022-10-18 at 3 31 18 PM" src="https://user-images.githubusercontent.com/90846030/196537931-206f1cee-7284-4d5a-a081-fb06269b2530.png">
