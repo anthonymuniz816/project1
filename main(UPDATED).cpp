@@ -1,3 +1,8 @@
+//Anthony Muniz
+//CS 303
+//10/18
+//UPDATED PROGRAM
+
 #include<iostream>
 #include<fstream>
 #include<sstream>
@@ -58,7 +63,7 @@ cout << endl;
     case 'b': case 'B':
     
       try{
-        cout << "What is the index of the number you would like to modify? ";
+        cout << "What is the index of the number you would like to modify? "; //If input is a string or larger than the array size, it will throw the input
         cin >>index;
         if(index>size || index<0){
           throw 1;
@@ -69,13 +74,13 @@ cout << endl;
           throw 2;
         }
         }
-        catch(int err){
+        catch(int err){        //Catches the invalid input
           cout<< "Please enter a valid index number." << endl;
           cin >> index;
         }
 
     try{
-      cout << "What would you like the new number to be? ";
+      cout << "What would you like the new number to be? "; //If input is a string or larger than the array size, it will throw the input
       cin >> num;
       
         if(std::cin.fail()){
@@ -84,7 +89,7 @@ cout << endl;
           throw 1;
         }
         }
-        catch(int err){
+        catch(int err){    //Catches the invalid input
           cout<< "Please enter a number." << endl;
           cin >> num;
         }
@@ -99,7 +104,7 @@ cout << endl;
     break;
     
     case 'c': case 'C':  
-      try{
+      try{                //If user enters a string, it will throw the input
       cout << "What number would you like to add? ";
       cin >> num;
         
@@ -109,7 +114,7 @@ cout << endl;
           throw 1;
         }
         }
-        catch(int err){
+        catch(int err){  //Catches the invalid input
           cout<< "Please enter a number." << endl;
           cin >> num;
         }
